@@ -592,7 +592,7 @@ class AdminController extends Controller {
 		if (Request::isMethod('post'))
 		{
 		$data = Input::all();
-		//echo '<pre>'; print_r($data); die();
+	
 		$data['created']= date('Y-m-d H:i:s');
 		
 		$data = Input::except(array('_token','_wysihtml5_mode','image','deleteimage','hiddenheaderimage','hiddenfeaturedImage'));
@@ -701,7 +701,7 @@ class AdminController extends Controller {
 			
 	
 		$data = Input::all();
-		//echo '<pre>'; print_r($data);die();
+
 		$data = Input::except(array('_token','_wysihtml5_mode','image','deleteimage','hiddenheaderimage','hiddenfeaturedImage'));
 	
 			

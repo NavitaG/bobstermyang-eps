@@ -36,7 +36,7 @@
 			  <h3 style="float:left;">Category Information</h3>
 			</div>
 
-			  {!! Form::open(array('url' => 'admin/blog/addblogcat','id'=>'addblogcategory','class'=>'form-horizontal','method'=>'post')) !!}
+			  {!! Form::open(array('url' => 'admin/blog/addblogcat','id'=>'addblogcategory','class'=>'form-horizontal full-width','method'=>'post')) !!}
 			<div class="modal-header">
 			 
 

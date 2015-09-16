@@ -40,12 +40,38 @@
 <div class="container">
 	<div class="row grid">
 		<div class="col-md-12 p-t-50">	
-			<div class="inner_content col-md-8 col-sm-8">
+			<div class="inner_content col-md-8 m-t-20">
 			
-			<p class="m-t-20 m-b-20">{!! $page->content !!}</p>
+				<div class="blog-post">
+
+				<div class="blog-post-thumb">
+
+				<img src="{{url('media/Blogs/woman-buying-coffee-in-coffee-shop710x320.jpg')}}"> 		
+
+				</div><!-- end .blog-post-thumb -->
+
+				<div class="blog-post-info">
+				27<br>
+				<small>Aug, 2015</small>
+
+				</div><!-- end .blog-post-info -->
+
+				<div class="blog-post-title border-bottom p-b-10">
+				<h3>EPS Wins Silver Award in 2014 Stevie Awards for Sales & Customer Service  </h3>
+
+
+				</div><!-- end .blog-post-title -->
+
+				<p class="sort-content">The Stevie Awards for Sales & Customer Service are the world’s top sales awards, contact center awards, and customer service awards.  The Stevie Awards organizes several of the world’s leading business awards shows including the prestigious American Business AwardsSM  and International Business AwardsSM.   “It’s truly an honor to be recognized and win this prestigious award from such an influential and respected organization like the Stevie Awards...</p>
+
+				<p class="text-right">
+				<a href="#" class="btn btn-green">Read more</a>
+				</p>
+
+				</div>
+    
 			<div class="m-t-50"></div>
-					
-		</div>
+		 </div>
 			@include('UI.innersidebar')
 			</div>
 		

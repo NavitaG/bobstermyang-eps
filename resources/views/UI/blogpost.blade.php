@@ -76,7 +76,7 @@
 			
 			<div class="m-t-50 p-t-20 border-top align-center">
 					<div class="intro">
-						<a href="#myModal" class="button gap-top-line-height">Get started</a>
+						<a href="#myModal" class="button gap-top-line-height">Get started Call to Action</a>
 					</div>
 				</div>
 			
