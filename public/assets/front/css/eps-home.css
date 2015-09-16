@@ -11430,10 +11430,135 @@ ul.innerpage_sidebar li li a:hover, ul.innerpage_sidebar li > ul.sub-menu li.ope
 ul.innerpage_sidebar li a:hover, ul.innerpage_sidebar li a.active {background: none repeat scroll 0 0 #006e3a;    border-left-color: #529069;    color: white;    text-decoration: none;}
 /******************Home page popup************************/
 #mask {	position:absolute;	left:0;	top:0;	z-index:9;	background-color:#000;	display:none;	width: 100% !important;	font-size: 32pt; 	color:white; 	opacity: 0.8;}  
-#boxes .window {	border-radius: 5px;	left: 0 !important;	margin: auto;	position: absolute;	right: 0;	text-align: center;	top: 0;	z-index: 10;}
+#boxes .window {	border-radius: 5px;	left: 0 !important;	margin: auto;	position: fixed;	right: 0;	text-align: center;	top: 0;	z-index: 10;}
 
 
-/******************End Home page popup************************/
+/******************Blog Page************************/
+.blog-post {
+    margin-bottom: 40px;
+    position: relative;
+}
+.blog-post-title {
+    margin: 0 0 30px 90px;
+}
+.blog-post-title p {
+    margin-bottom: 0;
+    padding: 5px 0;
+}
+.blog-post-title p span {
+    display: none;
+}
+.blog-post-title p i {
+    margin-left: 20px;
+}
+.blog-post-info {
+    color: #fff;
+}
+.blog-post-info, .portfolio-filter ul li a.active, .portfolio-filter ul li a:hover {
+    background-color: #006e3a;
+}
+.blog-post-title p i:first-child {
+    margin-left: 0;
+}
+.blog-post-title {
+    float: left;
+    margin: 0 0 30px 17px;
+    width: 85%;
+}
+.blog-post-title > h3 {
+    font-family: square market,"open sans";
+    font-size: 18px;
+    font-weight: 500 !important;
+    line-height: 30px;
+    margin: 0;
+    padding: 0;
+}
+.blog-post-thumb {
+    margin: 40px 0;
+    position: relative;
+}
+.blog-post-thumb:first-child {
+    margin-top: 0;
+}
+.blog-post-thumb img {
+    display: block;
+    width: 100%;
+}
+.blog-post-info {
+    float: left;
+    font-size: 36px;
+    padding: 15px 10px 10px;
+    text-align: center;
+    line-height: 20px
+}
+.blog-post-info small {
+    font-size: 35%;
+}
+.blog-timeline-left-side, .blog-timeline-right-side {
+    float: left;
+}
+.blog-timeline-right-side {
+    padding-top: 100px;
+}
+.blog-timeline-separator {
+    float: left;
+    min-height: 10px;
+    width: 100px;
+}
+.blog-timeline-left-side .blog-post-thumb:before {
+    content: "";
+    height: 0;
+    position: absolute;
+    right: -30px;
+    top: 0;
+    transition: all 0.3s ease 0s;
+    width: 0;
+}
+.blog-timeline-right-side .blog-post-thumb:before {
+    content: "";
+    height: 0;
+    left: -30px;
+    position: absolute;
+    top: 0;
+    transition: all 0.3s ease 0s;
+    width: 0;
+}
+.blog-timeline .blog-post {
+    box-sizing: border-box;
+    width: 420px;
+}
+.blog-timeline-left-side .blog-post:after, .blog-timeline-right-side .blog-post:after {
+    border-radius: 50%;
+    content: "";
+    height: 12px;
+    position: absolute;
+    top: 0;
+    transition: all 0.3s ease 0s;
+    width: 12px;
+}
+.blog-timeline-left-side .blog-post:after {
+    right: -57px;
+}
+.blog-timeline-right-side .blog-post:after {
+    left: -57px;
+}
+a.blog-timeline-load-more {
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    padding: 14px 5px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+    width: 60px;
+}
+.blog-post .btn {
+    border-radius: 1px !important;
+  }
+  .sort-content {
+    float: left;
+}
+/******************End blog page ************************/
 
 
 /***************** css changes 14 separate ************************/
