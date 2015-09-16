@@ -1,0 +1,32 @@
+	<div class="col-md-4 col-sm-4">	
+	<div class="view-content">
+
+	<div class="page-sidebar" id="main-menu">
+
+		<div class="page-sidebar-wrapper scrollbar-dynamic m-t-20" id="main-menu-wrapper">
+		<ul class="innerpage_sidebar">
+		<?php /**/ $root = App\Categories::parentnavigation(); $i=1; $uri = Request::path(); /**/ ?>
+		
+	  			<?php foreach($root as $root): ?> 
+					<?php if($root['slug']=='home'): ?>
+					<?php else: ?>
+					<li class=""><a href="javascript:;" class="<?php if($uri==$root['slug']): ?> active <?php endif; ?>"><span class="title"> <?php echo e($root['name']); ?></span></a>
+						<?php /**/  $child = App\Categories::childnavigation($root['id'])	/**/ ?> 
+						<?php if($child!='No child'): ?>
+						<ul class="sub-menu">				
+							<?php foreach($child as $child): ?> 
+							<li ><a href="<?php echo e($child['slug']); ?>" class="<?php if($uri==$child['slug']): ?> active <?php endif; ?>"><span class="title"><?php echo e($child['name']); ?></span></a></li>
+							<?php endforeach; ?>
+							</ul>
+						<?php endif; ?>
+					</li>
+					<?php endif; ?>
+					<?php /**/ $i++; /**/ ?>
+				<?php endforeach; ?>
+		  </ul>
+		</div>
+    </div>
+
+
+	</div>
+	</div>

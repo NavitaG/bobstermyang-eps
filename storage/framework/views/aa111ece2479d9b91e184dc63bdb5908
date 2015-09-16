@@ -1,0 +1,181 @@
+<header id="ha-header" class="ha-header ha-header-hide "  >
+	<div class="ha-header-perspective">
+		
+<div class="ha-header-front navbar navbar-default">
+		<div class="compressed">
+			<div class="navbar-header col-md-12 text-center ">
+				<button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" id="resp-menu1"  type="button">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+			<a href="<?php echo e(URL::to('/')); ?>" class="navbar-brand col-md-12"><img src="<?php echo e(URL :: to('assets/img/logo.png')); ?>" data-src="<?php echo e(URL :: to('assets/img/logo.png')); ?>" data-src-retina="<?php echo e(URL :: to('assets/img/logo.png')); ?>" width="119" height="22" alt=""/></a>
+						  	
+			</div>
+			<div class="top-profile">
+			 <ul class="nav navbar-nav navbar-right loginul" >
+				<?php if(Auth::guest()): ?>
+					<li ><?php echo HTML::link('auth/login', 'Login', array('id' => '')); ?></li>
+					<li ><?php echo HTML::link('user/register', 'Register'); ?> </li>
+					<?php else: ?>
+						<li class="dropdown">
+							
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?php echo e(Auth::user()->name); ?>
+
+							<div class="user-details">
+							<div class="username"> <?php echo e(Auth::user()->FirstName); ?> <span class="bold"><?php echo e(Auth::user()->LastName); ?></span> </div>
+						  </div>
+							 <span class="caret"></span></a>
+							
+							<ul aria-labelledby="user-options" role="menu" class="dropdown-menu  pull-right">
+							<li ><?php echo HTML::link('/logout', 'Logout', array('id' => '')); ?></li>
+							</ul>
+							
+						</li>
+					
+					<?php endif; ?>
+			  </ul>
+			</div><!--/.nav-collapse -->
+				
+			<ul class="menu menu1 nav navbar-nav navbar-right nav-scrol">
+			  <?php /**/ $root = App\Categories::parentnavigation() /**/ ?>
+						<li ><a href="<?php if(Auth::guest()): ?><?php echo e(URL::to('/')); ?><?php else: ?><?php echo e(URL::to('/frontend')); ?><?php endif; ?>">Home</a></li>
+						<?php foreach($root as $root): ?> 
+						<?php if($root['slug']=='home'): ?>
+						
+						<?php else: ?>
+						<li ><a href="<?php echo e($root['slug']); ?>"><?php echo e($root['name']); ?></a>
+							<?php /**/  $child = App\Categories::childnavigation($root['id'])	/**/ ?> 
+							<?php if($child!='No child'): ?>
+							<ul class="sub-menu">				
+							<?php foreach($child as $child): ?> 
+							<li ><a href="<?php echo e($child['slug']); ?>"><?php echo e($child['name']); ?></a>
+								 <?php /**/  $child1 = App\Categories::childnavigation($child['id'])	/**/ ?> 
+								<?php if($child1!='No child'): ?>
+								<ul>				
+								 <?php foreach($child1 as $child1): ?> 
+								 <li ><a href="<?php echo e($child1['slug']); ?>"><?php echo e($child1['name']); ?></a>
+									<?php /**/  $child2 = App\Categories::childnavigation($child1['id'])	/**/ ?> 
+									<?php if($child2!='No child'): ?>
+									<ul>				
+									<?php foreach($child2 as $child2): ?> 
+									<li ><a href="<?php echo e($child2['slug']); ?>"><?php echo e($child2['name']); ?></a>
+									</li>
+									<?php endforeach; ?>
+									</ul>
+									<?php endif; ?>
+								 </li>
+								 <?php endforeach; ?>
+								</ul>
+								<?php endif; ?>
+							</li>
+							<?php endforeach; ?>
+							</ul>
+							<?php endif; ?>
+						</li>
+						<?php endif; ?>
+						<?php endforeach; ?>
+						<li><a href="/contact_eps">Contact</a></li>
+		  </ul>
+
+		  </div>
+
+		</div>
+	</div>
+</header>
+
+<div class="section ha-waypoint"  data-animate-down="ha-header-hide" data-animate-up="ha-header-hide">
+<div role="navigation" class="navbar navbar-transparent navbar-top">
+<div class="container"> 
+<div class="compressed">
+<div class="navbar-header col-md-12 text-center ">
+	
+				<button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" id="resp-menu2"  type="button">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			   </button>
+				<a href="<?php echo e(URL::to('/')); ?>" class="navbar-brand col-md-12"><img src="<?php echo e(URL :: to('assets/img/logo.png')); ?>" data-src="<?php echo e(URL :: to('assets/img/logo.png')); ?>" data-src-retina="<?php echo e(URL :: to('assets/img/logo.png')); ?>" width="119" height="22" alt=""/></a>
+</div>
+<div class="top-profile">
+<ul class="nav navbar-nav navbar-right loginul" >
+					
+					<?php if(Auth::guest()): ?>
+					<li ><?php echo HTML::link('auth/login', 'Login', array('id' => '')); ?></li>
+					<li ><?php echo HTML::link('user/register', 'Register'); ?> </li>
+					<?php else: ?>
+						<li class="dropdown">
+							
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?php echo e(Auth::user()->name); ?>
+
+							<div class="user-details">
+							<div class="username"> <?php echo e(Auth::user()->FirstName); ?> <span class="bold"><?php echo e(Auth::user()->LastName); ?></span> </div>
+						  </div>
+							 <span class="caret"></span></a>
+							
+							<ul aria-labelledby="user-options" role="menu" class="dropdown-menu  pull-right">
+								<li ><?php echo HTML::link('/logout', 'Logout', array('id' => '')); ?></li>
+							</ul>
+							
+						</li>
+					
+					<?php endif; ?>
+
+</ul>
+</div><!--/.nav-collapse -->
+<ul class="menu menu2 nav navbar-nav navbar-right">
+	  <?php /**/ $root = App\Categories::parentnavigation() /**/ ?>
+	  			<li ><a href="<?php if(Auth::guest()): ?><?php echo e(URL::to('/')); ?><?php else: ?><?php echo e(URL::to('/frontend')); ?><?php endif; ?>">Home</a></li>
+	  			<?php foreach($root as $root): ?> 
+				<?php if($root['slug']=='home'): ?>
+				<?php else: ?>
+				<li ><a href="<?php echo e($root['slug']); ?>"><?php echo e($root['name']); ?></a>
+					<?php /**/  $child = App\Categories::childnavigation($root['id'])	/**/ ?> 
+					<?php if($child!='No child'): ?>
+					<ul class="sub-menu">				
+					<?php foreach($child as $child): ?> 
+					<li ><a href="<?php echo e($child['slug']); ?>"><?php echo e($child['name']); ?></a>
+						 <?php /**/  $child1 = App\Categories::childnavigation($child['id'])	/**/ ?> 
+						<?php if($child1!='No child'): ?>
+						<ul>				
+						 <?php foreach($child1 as $child1): ?> 
+						 <li ><a href="<?php echo e($child1['slug']); ?>"><?php echo e($child1['name']); ?></a>
+							<?php /**/  $child2 = App\Categories::childnavigation($child1['id'])	/**/ ?> 
+							<?php if($child2!='No child'): ?>
+							<ul>				
+							<?php foreach($child2 as $child2): ?> 
+							<li ><a href="<?php echo e($child2['slug']); ?>"><?php echo e($child2['name']); ?></a>
+							</li>
+							<?php endforeach; ?>
+							</ul>
+							<?php endif; ?>
+						 </li>
+						 <?php endforeach; ?>
+						</ul>
+						<?php endif; ?>
+					</li>
+					<?php endforeach; ?>
+					</ul>
+					<?php endif; ?>
+				</li>
+				<?php endif; ?>
+				<?php endforeach; ?>
+				<li><a href="/contact_eps">Contact</a></li>
+  </ul>
+
+</div>
+</div>
+</div>
+<!--BEGIN SLIDER -->
+<div class="tp-banner-container">
+<div class="tp-banner" id="home" >
+<img src="<?php echo e(URL :: to('assets/front/img/bg/BackstretchSkyline dark.jpg')); ?>"   alt="Home page"  data-bgfit="cover" data-bgposition="right center" data-bgrepeat="no-repeat" id="headerbanner">
+<div class="tp-bannertimer"></div>
+</div>
+</div>
+<!--END SLIDER	-->
+
+
+</div>

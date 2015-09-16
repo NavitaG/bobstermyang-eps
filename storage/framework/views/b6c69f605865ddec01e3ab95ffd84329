@@ -1,0 +1,37 @@
+<?php $__env->startSection('metainfo'); ?>
+<title><?php echo e($page->title); ?> | <?php echo e($page->meta_title); ?></title>
+<meta name="description" content="<?php echo e($page->meta_description); ?>">
+<meta name="keywords" content="<?php echo e($page->keywords); ?>">
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?>
+<div class="container">
+	<div class="row">
+		<div class="<?php if($page->sidebar==1): ?> col-md-9 col-sm-9 <?php else: ?> col-md-12 col-sm-12 <?php endif; ?>">	
+			
+		<h2 class="p-t-0 heading"><?php echo e($page->heading); ?></h2>
+			<div class="content">
+			<?php if($page->featuredImage!=''): ?>
+			<img width="100%" height="450" title="" alt="" src="<?php echo e(URL:: to('/media/CMSPages')); ?>/<?php echo e($page->featuredImage); ?>880x450.<?php echo e($page->ext); ?>" typeof="foaf:Image">
+			<?php endif; ?>
+			<p class="m-t-20 m-b-20"><?php echo $page->content; ?></p>
+			</div>
+		</div>
+		<?php if($page->sidebar==1): ?> 
+		<?php echo $__env->make('UI.innersidebar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+		<?php endif; ?>
+	</div>
+		
+</div> <!--end container -->
+
+</div>
+</div>
+<!----------- End content  ------------>
+<?php $__env->stopSection(); ?>
+
+
+<?php $__env->startSection('moreJS'); ?>
+
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.Innerpage', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

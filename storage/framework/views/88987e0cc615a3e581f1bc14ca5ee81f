@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class="no-js lang-en country-US locale-en-US " lang="en">
+
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" name="viewport" />
+<meta content="telephone=no" name="format-detection" />
+<meta content="authenticity_token" name="csrf-param" />
+<meta content="stiQRPGPk/3tHyRvHJROC+sf/f9w+sFIdcMRLeqHPXM=" name="csrf-token" />
+<title>Credit Card Processing &amp; Business Solutions | EPS</title>
+<meta content="EPS is one service for your entire business, from secure credit card processing - including Apple Pay &amp; EMV - to point of sale solutions. Sign up today!" name="description" />
+<meta content="credit card processing, business solutions, accept credit card payments, accept nfc, apple pay, contactless, Square" name="keywords" />
+<meta content="oiruxiwIx4W8HLGHf2ac1I009KI5OKk-ju28t7qXeJ0" name="google-site-verification" />
+<meta content="7AA613F849501521B6996C38E61AB3BC" name="msvalidate.01" />
+<meta content="cb526aa3706990fc2d2969e5ac7ad060" name="p:domain_verify" />
+<meta content="photo" name="twitter:card" />
+<meta content="square" name="twitter:site" />
+<meta content="square" name="twitter:creator" />
+<meta content="Credit Card Processing &amp; Business Solutions | Square" name="twitter:title" />
+<meta content="https://dl6rt3mwcjzxg.cloudfront.net/assets/social/home.us-8aaa514f2a5b64aaab76eeffd3e82c2a.jpg" name="twitter:image:src" />
+<meta content="eps-na.com" name="twitter:domain" />
+<meta content="Credit Card Processing &amp; Business Solutions | Square" property="og:title" />
+<meta content="https://dl6rt3mwcjzxg.cloudfront.net/assets/social/home.us-8aaa514f2a5b64aaab76eeffd3e82c2a.jpg" property="og:image" />
+<meta content="Square" property="og:site_name" />
+<meta content="cb526aa3706990fc2d2969e5ac7ad060" name="p:domain_verify" />
+
+
+<?php echo HTML::style('assets/front/css/eps-home.css'); ?>
+
+<?php echo HTML::script('assets/front/plugins/js/modernizr-home.js'); ?>
+
+
+<?php echo $__env->yieldContent('homehead'); ?>
+
+</head>
+
+<body class="home-page hero-image-split">
+		<?php echo $__env->make('layouts.homeheader', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+		<?php echo $__env->yieldContent('content'); ?>
+
+		<?php echo $__env->make('layouts.homefooter', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+ 
+ <?php echo $__env->make('layouts.homefoot', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+ 
+ <?php echo $__env->yieldContent('moreJS'); ?>
+
+</body>
+</html>

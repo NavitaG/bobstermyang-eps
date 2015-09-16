@@ -1,0 +1,20 @@
+<?php echo $__env->yieldContent('adminHead'); ?>
+<!-- BEGIN BODY -->
+<body class="">
+	<?php echo $__env->make('layouts.adminHeader', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+<div class="page-container row-fluid">
+	
+	<?php echo $__env->make('layouts.adminSidebar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+	 
+	<?php echo $__env->yieldContent('content'); ?>
+	
+	<?php echo $__env->make('layouts.adminChat', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+</div>
+	
+
+<?php $__env->startSection('moreJS'); ?>
+
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.adminFoot', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

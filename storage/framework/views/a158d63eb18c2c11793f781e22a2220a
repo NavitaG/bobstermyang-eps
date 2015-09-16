@@ -1,0 +1,149 @@
+	<div class="col-md-3 col-sm-3">	
+	<div class="view-content">
+	<div class="views-row views-row-1 views-row-odd views-row-first">
+
+	<div class="views-field views-field-edit-node"> 
+	<span class="field-content"></span>  </div>  
+	<div class="views-field views-field-title">    
+	<h3 class="field-content"><i class="fa fa-pencil"></i> Get Started Today</h3>  </div>  
+	<div class="views-field views-field-body">  
+	<div class="field-content"><p>Your FREE statement analysis can show you how much you can save with EPS. &nbsp;
+	<br>
+	<a href="#myModal" data-toggle="modal" data-target="#myModal">Click Here to Start.</a></p>
+	</div>
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			  <br>
+			  <i class="fa fa-credit-card fa-7x"></i>
+			  <h3 id="myModalLabel" class="semi-bold">Free Statement Analysis</h3>
+			  <p class="no-margin">Get started today! Fill out the form below to start accepting payments with your new merchant account and receive a free credit card reader.</p>
+			  <br>
+			</div>
+			<div class="modal-body">
+				<?php echo Form::open(array('url' => '#','id'=>'analysis','class'=>'form-no-horizontal-spacing')); ?>
+
+			  <div class="row form-row">
+				<div class="col-md-6">
+					 <?php echo Form::text('name', '' , ['class'=>'form-control', 'id'=>'title','placeholder'=>'Your Name']); ?>
+
+				 </div>
+				<div class="col-md-6">
+					<?php echo Form::text('business', '' , ['class'=>'form-control', 'id'=>'title','placeholder'=>'Business Name']); ?>
+
+				</div>
+			  </div>
+			  <div class="row form-row">
+				<div class="col-md-12">
+					<?php echo Form::text('email', '' , ['class'=>'form-control', 'id'=>'title','placeholder'=>'Your Email']); ?>
+
+				</div>
+			  </div>
+			  <div class="row form-row">
+				<div class="col-md-6">
+					<?php echo Form::text('phone', '' , ['class'=>'form-control', 'id'=>'title','placeholder'=>'Your Phone']); ?>
+
+				</div>
+				<div class="col-md-6">
+					<?php echo Form::text('current_rate', '' , ['class'=>'form-control', 'id'=>'title','placeholder'=>'Current Rate']); ?>
+
+				</div>
+			  </div>
+			 <div class="row form-row">
+				<div class="col-md-6 selectC">
+				  <?php $status= array(''=>'Select State'); ?>
+				  <?php echo Form::select('state', $status,'',array('class'=>'form-control select2', 'id'=>'status','placeholder'=>'Select State')); ?>
+
+			  
+				</div>
+				<div class="col-md-6">
+				<?php echo Form::text('city', '' , ['class'=>'form-control', 'id'=>'title','placeholder'=>'City']); ?>
+
+				</div>
+			  </div>
+				<div class="row form-row m-t-10">
+				<div class="col-md-12">
+					<label class="form-label">How did you hear about EPS</label>
+					<div class="radio">
+						<div class="row col-md-12">
+                          <input type="radio" checked="checked" value="newspaper" name="about" id="male">
+                          <label for="newspaper">Newspaper/Magazine Ad </label>
+                          </div>
+                          <div class="row col-md-12">
+                          <input type="radio" value="web" name="about" id="web">
+                          <label for="web">Web</label>
+                          </div>
+                          <div class="row col-md-12">
+                          <input type="radio" value="radio" name="about" id="radio">
+                          <label for="radio">Radio Ad</label>
+                          </div>
+                          <div class="row col-md-12">
+                          <input type="radio" value="wom" name="about" id="wom">
+                          <label for="wom">Word of Mouth</label>
+                          </div>
+                          <div class="row col-md-12">
+                          <input type="radio" value="other" name="about" id="other">
+                          <label for="other">Other</label>
+                          </div>
+                        </div>
+				  
+				</div>
+				</div>
+		
+				<div class="row form-row m-t-10">
+				<div class="col-md-12">
+					<label class="form-label">If "Other, please add here </label>
+					<?php echo Form::text('others', '' , ['class'=>'form-control', 'id'=>'other1','placeholder'=>'']); ?>
+
+				</div>
+				</div>
+		
+				<div class="row form-row m-t-10">
+				<div class="col-md-12">
+					<label class="form-label">To make sure you are human, what is 3 + 4?</label>
+					<?php echo Form::text('capcha', '' , ['class'=>'form-control', 'id'=>'capcha','placeholder'=>'']); ?>
+
+				</div>
+				</div>
+		
+			<?php echo Form::close(); ?>
+
+			</div>
+			<div class="modal-footer">
+			  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			  <button type="button" class="btn btn-primary" >Save changes</button>
+			</div>
+		  </div>
+		  <!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+		</div>
+               
+	</div> 
+	</div>
+
+	<div class="views-row views-row-2 views-row-even">
+
+	<div class="views-field views-field-edit-node"><span class="field-content"></span></div>  
+	<div class="views-field views-field-title">   
+	<h3 class="field-content"><i class="fa fa-globe"></i> Merchant Services</h3></div>  
+	<div class="views-field views-field-body"> 
+	<div class="field-content"><p>Learn how to get started accepting credit card payments anywhere with our unique products and customized merchant service solutions giving you a competitive advantage while saving you money. &nbsp;
+	<br><a title="Learn about credit card processing solutions" rel="nofollow" href="javascript:;">Get Your Merchant Account</a></p>
+	</div>  
+	</div>  
+	</div>
+
+	<div class="views-row views-row-3 views-row-odd views-row-last">
+
+	<div class="views-field views-field-edit-node"><span class="field-content"></span></div>  
+	<div class="views-field views-field-title"> 
+	<h3 class="field-content"><i class="fa fa-mobile"></i> Mobile Payments</h3>  </div>  
+	<div class="views-field views-field-body"> 
+	<div class="field-content"><p>Receive a FREE smartphone credit card reader, giving you the highest level of data security, real-time mobile payment processing and quick, hassle-free deposits. Great for small businesses getting started. &nbsp;
+	<br><a rel="nofollow" title="Accept credit card through mobile" href="javascript:;">Learn About Mobile Payments.</a></p>
+	</div>  </div>  </div>
+	</div>
+	</div>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html class="no-js lang-en country-US locale-en-US " lang="en">
+<head>
+    <?php echo $__env->make('layouts.homehead', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+     <?php echo $__env->yieldContent('extrastyle'); ?>
+</head>
+
+<body class="home-page hero-image-split">
+	<div class="main-wrapper">
+		<?php echo $__env->make('layouts.profileheader', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+		<?php echo $__env->yieldContent('content'); ?>
+
+		<?php echo $__env->make('layouts.homefooter', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+	</div>
+ <?php echo $__env->make('layouts.homefoot', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+ 
+ <?php echo $__env->yieldContent('moreJS'); ?>
+
+</body>
+</html>

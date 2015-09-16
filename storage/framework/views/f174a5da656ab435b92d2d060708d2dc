@@ -1,0 +1,68 @@
+<header id="overview">
+	<nav class="banner" role="navigation">
+
+<div class="content">
+<div class="col-md-12">
+<a href="<?php echo e(URL::to('/')); ?>" class="logo pull-left"><img src="<?php echo e(URL :: to('assets/img/logo.png')); ?>" data-src="<?php echo e(URL :: to('assets/img/logo.png')); ?>" data-src-retina="<?php echo e(URL :: to('assets/img/logo.png')); ?>" style="height: auto; width: 160px ! important;" alt=""/></a>
+<?php /**/ $root = App\Categories::parentnavigation() /**/ ?>
+<?php foreach($root as $root): ?> 
+<?php if($root['slug']=='home'): ?>
+<?php else: ?>
+<a class="drawer-link pull-left show-at-small" data-drawer="<?php echo e($root['slug']); ?>" data-link-action="Business Types Drawer" data-link-label="Banner" href="#"><?php echo e($root['name']); ?></a>	
+<?php endif; ?>
+<?php endforeach; ?>		
+
+
+
+
+<?php if(Auth::guest()): ?>
+<?php echo HTML::link('user/register', 'Register', array('class' => 'pull-right gap-right-line-height')); ?> 
+<?php echo HTML::link('auth/login', 'Login', array('class' => 'pull-right gap-right-line-height')); ?>
+
+<?php else: ?>
+<?php echo HTML::link('/logout', 'Logout', array('class' => 'pull-right gap-right-line-height')); ?>
+
+<?php echo HTML::link('dashboard', 'Account', array('class' => 'pull-right gap-right-line-height')); ?>
+
+<?php endif; ?>
+<?php echo HTML::link('contact_eps', 'Contact', array('class' => 'pull-right gap-right-line-height')); ?>
+
+</div>
+</div>
+
+<div class="image">
+</div>
+</nav>
+</header>
+<nav class="nav-drawer">
+ <?php /**/ $root = App\Categories::parentnavigation() /**/ ?>
+						<?php foreach($root as $root): ?> 
+						<?php if($root['slug']=='home'): ?>
+						<?php else: ?>
+						<div class="drawer" id="<?php echo e($root['slug']); ?>">
+						<nav class="content pad-vert-small inverted">
+							<?php /**/  $child = App\Categories::childnavigation($root['id'])	/**/ ?> 
+							<?php if($child!='No child'): ?>
+							<div class="group one-half-at-medium gap-bottom-line-height gap-bottom-none-at-medium">
+							<ul class="reset one-half-at-large">			
+							<?php foreach($child as $child): ?> 
+							<li class="reader contactless">
+							<a data-link-action="<?php echo e($child['name']); ?>" data-link-label="Verticals Nav" href="<?php echo e($child['slug']); ?>"><span><?php echo e($child['name']); ?></span></a>
+							</li>
+							<?php endforeach; ?>
+							</ul>
+							</div>
+							<?php endif; ?>
+						</nav>
+						</div>
+
+						<?php endif; ?>
+						<?php endforeach; ?>
+</nav>
+
+<div class="main-content" role="main">
+<section class="hero" id="hero-section">
+<div class="image">
+</div>
+</section>
+
